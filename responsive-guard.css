@@ -1,0 +1,83 @@
+/* Responsive safety layer for the interactive CV. */
+:root {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+html, body {
+  width: 100%;
+  max-width: 100%;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+img, picture, svg, canvas {
+  max-width: 100%;
+  height: auto;
+}
+video, iframe, embed, object {
+  max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6, p, li, a, button, label {
+  overflow-wrap: anywhere;
+}
+a, button, [role="button"] {
+  touch-action: manipulation;
+}
+pre, code {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+table {
+  max-width: 100%;
+}
+
+@media (max-width: 900px) {
+  html, body {
+    min-width: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .stage {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-width: 0 !important;
+  }
+
+  .stage > .base,
+  .stage img.base {
+    position: relative !important;
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  main, header, footer, section, article, aside, nav {
+    max-width: 100% !important;
+  }
+
+  [class*="container"],
+  [class*="wrapper"],
+  [class*="content"],
+  [class*="inner"] {
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  img, picture, svg, canvas, video, iframe, embed, object {
+    max-width: 100% !important;
+  }
+
+  input, select, textarea, button {
+    max-width: 100%;
+    font-size: 16px;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
